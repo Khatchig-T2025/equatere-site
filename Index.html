@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Equatere | Real Estate for All</title>
+  <style>
+    :root {
+      --primary: #e74c3c;
+      --accent: #3498db;
+      --dark: #1f1f1f;
+      --light: #f4f4f4;
+      --white: #ffffff;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+    header {
+      background: var(--white);
+      padding: 1.2rem;
+      text-align: center;
+      border-bottom: 3px solid var(--primary);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header h1 {
+      font-size: 2rem;
+      color: var(--primary);
+    }
+    nav {
+      margin-top: 0.5rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: var(--dark);
+      margin: 0 1rem;
+      font-weight: 600;
+    }
+    nav a:hover {
+      color: var(--primary);
+    }
+    section {
+      padding: 4rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .hero {
+      background: linear-gradient(135deg, var(--primary), #c0392b);
+      color: var(--white);
+      text-align: center;
+      padding: 5rem 1rem;
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      color: var(--accent);
+      margin-bottom: 2rem;
+    }
+    .values, .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background: var(--white);
+      padding: 2rem;
+      border-left: 4px solid var(--primary);
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    .card h3 {
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+    .contact form {
+      max-width: 500px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .contact input, .contact textarea {
+      padding: 1rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .contact button {
+      padding: 1rem;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .admin-panel, .approval-table {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      margin-top: 2rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    th, td {
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+    th {
+      background: var(--light);
+    }
+    .btn-approve {
+      background: #2ecc71;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .btn-deny {
+      background: #e74c3c;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    footer {
+      background: var(--dark);
+      color: var(--white);
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    footer a {
+      color: var(--accent);
+      margin: 0 0.5rem;
+      text-decoration: none;
+    }
+    @media (max-width: 600px) {
+      nav {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Equatere</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#mission">Mission</a>
+      <a href="#values">Values</a>
+      <a href="#listings">Listings</a>
+      <a href="#admin">Admin</a>
+      <a href="#contact">Contact</a>
+      <a href="#legal">Legal</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <h2>Equality in Real Estate Access</h2>
+    <p>Tools, listings, and insight for agents, buyers, and sellers — accessible to all.</p>
+  </section>
+
+  <section id="mission">
+    <h2 class="section-title">Our Mission</h2>
+    <p style="text-align: center; max-width: 700px; margin: auto;">
+      Equatere empowers real estate professionals and the public to collaborate transparently. We believe in shared incentives, clear data, and unrestricted opportunity across all levels of the housing market.
+    </p>
+  </section>
+
+  <section id="values">
+    <h2 class="section-title">Core Values</h2>
+    <div class="values">
+      <div class="card">
+        <h3>🔓 Access</h3>
+        <p>We believe all market participants deserve full visibility into real estate opportunities.</p>
+      </div>
+      <div class="card">
+        <h3>📊 Information</h3>
+        <p>We provide transparent, real-time data — accessible without traditional gatekeepers.</p>
+      </div>
+      <div class="card">
+        <h3>🎯 Opportunity</h3>
+        <p>Buyers, sellers, agents, and owners can directly share value and incentives without friction.</p>
+      </div>
+    </div>
+  </section>
+  <section id="listings">
+    <h2 class="section-title">Sample Listings</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>3BR Home – San Diego</h3>
+        <p>Listed by Agent Smith — Offering 2.5% Commission</p>
+      </div>
+      <div class="card">
+        <h3>Retail Space – Oakland</h3>
+        <p>FSBO – Owner seeking buyer’s agent, 3% split</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="admin">
+    <h2 class="section-title">Admin Approval Panel</h2>
+    <div class="admin-panel">
+      <h3>Pending Agent Approvals</h3>
+      <div class="approval-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>License #</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Jane Doe</td>
+              <td>jane@example.com</td>
+              <td>CA123456</td>
+              <td>Pending</td>
+              <td>
+                <button class="btn-approve">Approve</button>
+                <button class="btn-deny">Deny</button>
+              </td>
+            </tr>
+            <tr>
+              <td>John Smith</td>
+              <td>john@example.com</td>
+              <td>CA654321</td>
+              <td>Pending</td>
+              <td>
+                <button class="btn-approve">Approve</button>
+                <button class="btn-deny">Deny</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="contact">
+    <h2 class="section-title">Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required/>
+      <input type="email" placeholder="Your Email" required/>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <section id="legal">
+    <h2 class="section-title">Legal Notice</h2>
+    <p style="max-width: 800px; margin: auto;">
+      Equatere is not an MLS and does not represent itself as one. All listings are manually submitted and are not sourced from any third-party MLS. Equatere does not offer brokerage services. Agents are responsible for the accuracy of their listings. Use of this site constitutes acceptance of our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Equatere. All rights reserved.</p>
+    <p>
+      <a href="#home">Back to Top</a> |
+      <a href="#contact">Contact</a> |
+      <a href="#legal">Legal</a>
+    </p>
+  </footer>
+
+</body>
+</html>
+<!-- This is a simple HTML template for Equatere, a real estate platform. It includes sections for mission, values, sample listings, admin approval panel, contact form, and legal notice. The design is responsive and uses CSS variables for easy theming. -->
